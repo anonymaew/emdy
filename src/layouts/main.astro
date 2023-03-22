@@ -1,0 +1,29 @@
+---
+import '../styles/global.css';
+const regex = /<\/span><\/a>(.*)<\/h1>/
+const title = regex.exec(await Astro.slots.render('default'))[1];
+---
+
+<html lang='en'>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+	</head>
+	<body class="bg-white dark:bg-zinc-900 pl-0 md:pl-80">
+    <main class="
+      relative           
+      mx-auto max-w-3xl p-8
+      prose dark:prose-invert
+      prose-p:leading-1 prose-li:m-0 
+      prose-code:before:content-[''] prose-code:after:content-['']
+      prose-li:m-0 prose-ol:m-0 prose-ul:m-0
+      [&_nav]:bg-zinc-100 dark:[&_nav]:bg-zinc-800
+    ">
+			<header class="">
+			</header>
+      <slot />
+		</main>
+	</body>
+</html>

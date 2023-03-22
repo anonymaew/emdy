@@ -1,0 +1,78 @@
+body {
+	font-family: system-ui;
+}
+.content {
+	max-width: 640px;
+	margin: 40px auto;
+	padding: 0 20px;
+}
+
+/* mathjax */
+.math {
+    overflow-x: auto;
+}
+.math-inline svg{
+    display: inline-block;
+}
+
+/* titile hash hover stuff */
+h1,h2,h3,h4 {
+    position: relative;
+}
+h1 a,h2 a,h3 a,h4 a {
+	position: absolute;
+	display: block;
+	height: 100%;
+	width: 100%;
+	color: inherit;
+}
+h1 a:before,h2 a:before,h3 a:before,h4 a:before {
+	position: absolute;
+	right: 100%;
+	display: block;
+	content: '#';
+	margin-right: 0.2em;
+	visibility: hidden;
+	opacity: 0.5;
+}
+h1:hover a:before,h2:hover a:before,h3:hover a:before,h4:hover a:before {
+	visibility: visible;
+}
+
+/* toc */
+.toc {
+    z-index: 1;
+    position: fixed;
+    width: 320px;
+    padding: 20px 20px 20px 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow-y: auto;
+}
+.toc ol {
+    list-style: none;
+}
+@media (max-width: 768px) {
+    .toc {
+        left: -100%;
+    }
+}
+
+/* code highlighting */
+.remark-code-title,
+pre[class^='language-'] {
+	padding: 10px;
+	margin: 0;
+}
+.remark-code-title {
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+	border-radius: 4px 4px 0 0;
+	background: rgba(0, 0, 0, 0.08);
+	font-family: monospace;
+	font-weight: bold;
+}
+pre[class^='language-'] {
+	background: rgba(0, 0, 0, 0.05);
+	border-radius: 0 0 4px 4px;
+}
