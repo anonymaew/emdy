@@ -25,3 +25,4 @@ pnpm-debug.log*
 
 src/pages/**
 !src/pages/index.md
+!src/pages/favicon.svg

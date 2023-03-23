@@ -1,5 +1,6 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
+import { astroImageTools } from 'astro-imagetools';
 
 const defaultLayoutPlugin = () => {
     return (tree, file) => {
@@ -9,7 +10,9 @@ const defaultLayoutPlugin = () => {
 
 // https://astro.build/config
 export default defineConfig({
+    publicDir: './src/pages',
     integrations: [
+        astroImageTools,
         tailwind(),
     ],
 	markdown: {

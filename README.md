@@ -1,12 +1,12 @@
 # My Markdown Previewer
 
 My markdown previewer/hosting platform resembling GFM, useful for
-notetaking, previewing markdown, or hosting blogs. (I haven't tested the
-hosting part, so it's just a previewing tool for now)
+notetaking, previewing markdown, or hosting blogs.
 
 ## Features
 
 - Supports light/dark theme
+- Supports printing (yes)
 - JavaScript is not needed for viewing
 - Code block highlighting
 - Table of contents on the side
@@ -23,8 +23,8 @@ bun i
 ```
 
 3. Put your Markdown files in the `./src/pages` directory
-4. Spin up a server, the li
+4. Spin up a server, the published site will be on port `80`, and live-preview is on port `8000`
 
 ```sh
-bun run dev
+bun run start
 ```
