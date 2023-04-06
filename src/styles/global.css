@@ -47,7 +47,7 @@ h1:hover a:before,h2:hover a:before,h3:hover a:before,h4:hover a:before {
     z-index: 1;
     position: fixed;
     width: 320px;
-    padding: 20px 20px 20px 0;
+    padding: 20px;
     top: 0;
     bottom: 0;
     left: 0;
@@ -55,6 +55,14 @@ h1:hover a:before,h2:hover a:before,h3:hover a:before,h4:hover a:before {
 }
 .toc ol {
     list-style: none;
+}
+.toc-link-h1 {
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+}
+.toc-level-1, .toc-level-2, .toc-item-h2 {
+    padding: 0;
 }
 @media (max-width: 768px) {
     .toc {
