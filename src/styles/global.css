@@ -1,13 +1,38 @@
+/* basics */
 body {
+    background: white;
+    color: black;
 	font-family: system-ui;
+    line-height: 1.8;
+    padding-left: 320px;
+}
+main{
+    position: relative;
+    padding: 32px;
+    margin: auto;
+    max-width: 768px;
+}
+a{
+    color: inherit;
+    font-weight: bold;
+}
+img{
+    display: block;
+    margin: auto;
+    border-radius: 6px;
+}
+pre{
+    border: 1px solid #d4d4d8;
+    border-radius: 6px;
+    padding: 16px;
+}
+summary {
+    cursor: pointer;
 }
 .content {
 	max-width: 640px;
 	margin: 40px auto;
 	padding: 0 20px;
-}
-summary {
-    cursor: pointer;
 }
 
 /* mathjax */
@@ -41,17 +66,21 @@ h1 a:before,h2 a:before,h3 a:before,h4 a:before {
 h1:hover a:before,h2:hover a:before,h3:hover a:before,h4:hover a:before {
 	visibility: visible;
 }
+sup a{
+    display: inline;
+}
 
 /* toc */
 .toc {
     z-index: 1;
     position: fixed;
-    width: 320px;
+    width: 280px;
     padding: 20px;
     top: 0;
     bottom: 0;
     left: 0;
     overflow-y: auto;
+    background: #f4f4f5;
 }
 .toc ol {
     list-style: none;
@@ -65,8 +94,32 @@ h1:hover a:before,h2:hover a:before,h3:hover a:before,h4:hover a:before {
     padding: 0;
 }
 @media (max-width: 768px) {
+    body{
+        padding-left: 0px;
+    }
     .toc {
         left: -100%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #18181b;
+        color: #e4e4e7;
+    }
+    .toc {
+        background: #27272a;
+    }
+    pre{
+        border: 1px solid #3f3f46;
+    }
+}
+
+/*print*/
+@media print {
+    body {
+        font-size: 0.8em;
+        line-height: 1.2;
     }
 }
 
