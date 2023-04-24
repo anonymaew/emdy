@@ -1,7 +1,7 @@
-# My Markdown Previewer
+# Notes
 
-My markdown previewer/hosting platform resembling GFM, useful for
-notetaking, previewing markdown, or hosting blogs.
+My markdown website hosting platform, useful for notetaking, previewing
+markdown, or hosting blogs.
 
 ## Features
 
@@ -11,20 +11,17 @@ notetaking, previewing markdown, or hosting blogs.
 - Code block highlighting
 - Table of contents on the side
 - Supports [LaTex math expressions](https://www.mathjax.org/)
-- [TODO] Supports [Mermaid Diagram](https://mermaid.js.org/)
 
-## Install and Run
+## Prerequisite
 
-1. Install [Bun Runtime](https://bun.sh/)
-2. Install dependencies
+Make sure you have `docker` cli.
 
-```sh
-bun i
-```
+## Run a Server
 
-3. Put your Markdown files in the `./src/pages` directory
-4. Spin up a server, the published site will be on port `80`, and live-preview is on port `8000`
+1. Create an Image `napatsc/notes`.
+2. Spin up containers using the template
+   [`docker-compose.yml`](./docker-compose.yml).
+   - You need to config mounting volumn of your markdown directory and output
+     directory.
+   - You might need to change your port number if there is a collision.
 
-```sh
-bun run start
-```
