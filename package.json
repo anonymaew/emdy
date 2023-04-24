@@ -4,7 +4,6 @@
   "version": "0.0.2",
   "scripts": {
     "dev": "astro dev",
-    "start": "astro build && astro preview --host --port 80 & astro dev --host --port 8000",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"

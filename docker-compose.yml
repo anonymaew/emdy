@@ -1,0 +1,15 @@
+# example of setting up a server
+version: '3'
+services:
+  builder:
+    image: napatsc/notes
+    volumes:
+      - ./src/pages:/app/src/pages:ro
+      - ./dist:/app/dist
+  host:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./dist:/usr/share/nginx/html:ro
+
