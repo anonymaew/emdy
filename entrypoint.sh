@@ -1,6 +1,7 @@
 #!/bin/sh                                             
 
 compile () {
+	rm -rf /app/dist
 	yarn build
 }
 
