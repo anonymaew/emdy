@@ -1,5 +1,8 @@
-Dockerfile
-.git
-*.md
-src/pages/*
-node_modules
+/Dockerfile
+/.dockerignore
+/.env
+/.config
+/.git
+/.gitignore
+/*.md
+/node_modules

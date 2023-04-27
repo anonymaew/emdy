@@ -22,7 +22,3 @@ pnpm-debug.log*
 
 # vim files
 *.swp
-
-src/pages/**
-!src/pages/index.md
-!src/pages/favicon.svg

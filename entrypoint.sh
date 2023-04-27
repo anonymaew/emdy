@@ -1,10 +1,16 @@
 #!/bin/sh                                             
 
 compile () {
-	rm -rf /app/dist
 	yarn build
+	find /app/dist -name "*.md" -type f -delete
 }
 
+setup () {
+	mkdir /app/dist
+	yarn preview --host --port 80 &
+}
+
+setup
 hash_command="ls -lR --full-time /app/src | sha256sum"
 hash=""
 while :; do                               
