@@ -1,4 +1,8 @@
-# Notes
+<sup> So, I just found that there is a solution for rendering markdown already called [Hugo](https://gohugo.io/). \
+It achieves the same goal as I am trying to be, also faster and better. \
+I decided to abandon this project and archive it. <sup>
+
+# Emdy
 
 My markdown website hosting platform, useful for notetaking, previewing
 markdown, or hosting blogs.
